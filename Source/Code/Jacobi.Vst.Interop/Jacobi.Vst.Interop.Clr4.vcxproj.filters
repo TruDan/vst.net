@@ -25,9 +25,6 @@
     <ClCompile Include="Properties\AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\_AssemblyInfo\AssemblyInfo.General.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\AssemblyInfo.Version.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -168,10 +165,10 @@
     <ClInclude Include="Host\VstUnmanagedPluginContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="_vst\aeffect.h">
+    <ClInclude Include="..\..\..\..\common\aeffect.h">
       <Filter>_vst</Filter>
     </ClInclude>
-    <ClInclude Include="_vst\aeffectx.h">
+    <ClInclude Include="..\..\..\..\common\aeffectx.h">
       <Filter>_vst</Filter>
     </ClInclude>
   </ItemGroup>

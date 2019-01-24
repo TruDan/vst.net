@@ -151,8 +151,9 @@
 	        new OpcodeInfo("audioMasterVersion", false),
 	        new OpcodeInfo("audioMasterCurrentId", false),
 	        new OpcodeInfo("audioMasterIdle", false),
-	        new OpcodeInfo("audioMasterPinConnected", true),
+	        new OpcodeInfo("audioMasterPinConnected", true), // 4
             // VST 2.0
+            new OpcodeInfo("unknown", true),
             new OpcodeInfo("audioMasterWantMidi", true),
 	        new OpcodeInfo("audioMasterGetTime", false),
 	        new OpcodeInfo("audioMasterProcessEvents", false),

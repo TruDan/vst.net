@@ -82,12 +82,12 @@ namespace Host {
 						Jacobi::Vst::Interop::Properties::Resources::VstUnmanagedPluginContext_LoadPluginFailed,
 						pluginPath));
 			}
-				
-			// check entry point
-			_pluginMain = (VSTPluginMain)::GetProcAddress(_hLib, "VSTPluginMain");
 
+			_pluginMain = (VSTPluginMain)::GetProcAddress(_hLib, "VSTPluginMain");
+				
 			if(_pluginMain == NULL)
 			{
+				System::Diagnostics::Debug::WriteLine("Warning: Plugin has old entry point!");
 				// check old entry point
 				_pluginMain = (VSTPluginMain)::GetProcAddress(_hLib, "main");
 			}

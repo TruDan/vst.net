@@ -11,8 +11,12 @@ public:
 	{
 		if(source)
 		{
+			
+
 			System::IntPtr mem = System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(source);
+			memset(dest, 0, maxLength);
 			strncpy_s(dest, maxLength, (const char*)mem.ToPointer(), _TRUNCATE);
+
 			System::Runtime::InteropServices::Marshal::FreeHGlobal(mem);
 		}
 	}

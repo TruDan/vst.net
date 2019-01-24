@@ -12,6 +12,8 @@
 #include <windows.h>
 //#include <stddef.h>
 
+
 // VST interface header files
-#include "_vst\aeffect.h"
-#include "_vst\aeffectx.h"
+#define VST_FORCE_DEPRECATED 0
+#include "../../../../common/aeffect.h"
+#include "../../../../common/aeffectx.h"

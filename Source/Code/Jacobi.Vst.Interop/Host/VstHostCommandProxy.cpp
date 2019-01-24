@@ -292,6 +292,9 @@ VstIntPtr VstHostCommandProxy::DispatchDeprecated(VstInt32 opcode, VstInt32 inde
 		case DECLARE_VST_DEPRECATED (audioMasterEditFile):
 			result = _deprecatedCmdStub->EditFile(TypeConverter::CharToString((char*)ptr)) ? 1 : 0;
 			break;
+		case DECLARE_VST_DEPRECATED(audioMasterWantMidi):
+			result = _deprecatedCmdStub->WantMidi() ? 1 : 0;
+			break;
 		case DECLARE_VST_DEPRECATED (audioMasterGetChunkFile):
 		{	System::String^ path = _deprecatedCmdStub->GetChunkFile();
 			TypeConverter::StringToChar(path, (char*)ptr, 2047);
@@ -304,7 +307,7 @@ VstIntPtr VstHostCommandProxy::DispatchDeprecated(VstInt32 opcode, VstInt32 inde
 		}	break;
 		default:
 			// unknown command
-			_traceCtx->WriteEvent(System::Diagnostics::TraceEventType::Information, "Unhandled dispatcher opcode:" + opcode);
+			_traceCtx->WriteEvent(System::Diagnostics::TraceEventType::Information, "Unknown dispatcher opcode:" + opcode);
 			break;
 		}
 	}
