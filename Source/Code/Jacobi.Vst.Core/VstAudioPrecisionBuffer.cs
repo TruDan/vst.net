@@ -1,7 +1,8 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
+using Jacobi.Vst.Core.Properties;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Represents a double precision audio buffer (mono) passed to plugin by the host.
     /// </summary>
@@ -14,7 +15,7 @@
         /// <param name="buffer">The buffer as specified by the host. Must not be null.</param>
         /// <param name="length">The length of the <paramref name="buffer"/>.</param>
         /// <param name="canWrite">An indaction if the buffer content can be changed by plugin.</param>
-        [System.CLSCompliant(false)]
+        [CLSCompliant(false)]
         public VstAudioPrecisionBuffer(double* buffer, int length, bool canWrite)
         {
             Buffer = buffer;
@@ -58,7 +59,7 @@
             }
             set
             {
-                if (!CanWrite) throw new InvalidOperationException(Properties.Resources.VstAudioBuffer_BufferNotWritable);
+                if (!CanWrite) throw new InvalidOperationException(Resources.VstAudioBuffer_BufferNotWritable);
                 Throw.IfArgumentNotInRange(index, 0, SampleCount - 1, "index");
 
                 unsafe
@@ -88,11 +89,11 @@
         {
             if (this.SampleCount > destination.SampleCount)
             {
-                throw new ArgumentException(Properties.Resources.VstAudioBuffer_BufferTooSmall, "destination");
+                throw new ArgumentException(Resources.VstAudioBuffer_BufferTooSmall, "destination");
             }
             if (!destination.CanWrite)
             {
-                throw new ArgumentException(Properties.Resources.VstAudioBuffer_BufferNotWritable, "destination");
+                throw new ArgumentException(Resources.VstAudioBuffer_BufferNotWritable, "destination");
             }
 
             unsafe

@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Platform-independent definition of Virtual Keys.
     /// </summary>

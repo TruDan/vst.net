@@ -1,7 +1,8 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
+using Jacobi.Vst.Core.Properties;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// A helper class for method parameter checking.
     /// </summary>
@@ -35,7 +36,7 @@
             if (argument != null && argument.Length > maxLength)
             {
                 throw new ArgumentException(
-                    String.Format(Properties.Resources.Throw_ArgumentTooLong, argument, maxLength), argumentName);
+                    String.Format(Resources.Throw_ArgumentTooLong, argument, maxLength), argumentName);
             }
         }
 
@@ -52,7 +53,7 @@
             {
                 IfArgumentIsNull(argument, argumentName);
 
-                throw new ArgumentException(Properties.Resources.Throw_ArgumentIsEmpty, argumentName);
+                throw new ArgumentException(Resources.Throw_ArgumentIsEmpty, argumentName);
             }
         }
 
@@ -71,7 +72,7 @@
             if (argument.CompareTo(minValue) < 0 || argument.CompareTo(maxValue) > 0)
             {
                 throw new ArgumentOutOfRangeException(argumentName, argument,
-                    String.Format(Properties.Resources.Throw_ArgumentNotInRange, minValue, maxValue));
+                    String.Format(Resources.Throw_ArgumentNotInRange, minValue, maxValue));
             }
         }
     }

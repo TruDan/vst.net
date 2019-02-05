@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Capability flags for the plugin.
     /// </summary>

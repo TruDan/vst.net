@@ -1,7 +1,8 @@
+using System;
+using Jacobi.Vst.Core.Properties;
+
 namespace Jacobi.Vst.Core
 {
-    using System;
-
     /// <summary>
     /// The VstEvent represents a base class common to both 
     /// <see cref="VstMidiEvent"/> and <see cref="VstMidiSysExEvent"/> classes.
@@ -18,7 +19,7 @@ namespace Jacobi.Vst.Core
         {
             if (eventType == VstEventTypes.Unknown)
             {
-                throw new ArgumentException(Properties.Resources.VstEvent_InvalidEventType, "eventType");
+                throw new ArgumentException(Resources.VstEvent_InvalidEventType, "eventType");
             }
 
             EventType = eventType;

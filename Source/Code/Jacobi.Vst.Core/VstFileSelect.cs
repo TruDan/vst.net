@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Maintains information on the file selector provided by the host.
     /// </summary>

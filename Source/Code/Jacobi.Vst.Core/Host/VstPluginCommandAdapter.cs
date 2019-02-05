@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using Jacobi.Vst.Core.Deprecated;
 
 namespace Jacobi.Vst.Core.Host
 {
@@ -529,7 +531,7 @@ namespace Jacobi.Vst.Core.Host
         /// </summary>
         /// <param name="rect">Passed with the forwarded call and back.</param>
         /// <returns>Returns the value returned from the forwarded call.</returns>
-        public bool EditorGetRect(out System.Drawing.Rectangle rect)
+        public bool EditorGetRect(out Rectangle rect)
         {
             return _pluginCmdStub.EditorGetRect(out rect);
         }
@@ -634,9 +636,9 @@ namespace Jacobi.Vst.Core.Host
         /// <returns>Returns an instance of <see cref="Deprecated.VstPluginCommandDeprecatedAdapter"/> when the <paramref name="pluginCmdStub"/> supports deprecated methods.</returns>
         public static VstPluginCommandAdapter Create(Plugin.IVstPluginCommandStub pluginCmdStub)
         {
-            if (pluginCmdStub is Deprecated.IVstPluginCommandsDeprecated20)
+            if (pluginCmdStub is IVstPluginCommandsDeprecated20)
             {
-                return new Deprecated.VstPluginCommandDeprecatedAdapter(pluginCmdStub);
+                return new VstPluginCommandDeprecatedAdapter(pluginCmdStub);
             }
 
             return new VstPluginCommandAdapter(pluginCmdStub);

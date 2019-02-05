@@ -1,4 +1,5 @@
 ﻿using System.Configuration;
+
 namespace Jacobi.Vst.Core.Plugin
 {
     /// <summary>

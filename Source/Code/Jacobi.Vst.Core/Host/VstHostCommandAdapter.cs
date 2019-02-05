@@ -1,6 +1,5 @@
-﻿using System;
-
-using Jacobi.Vst.Core;
+﻿using Jacobi.Vst.Core.Deprecated;
+using Jacobi.Vst.Core.Plugin;
 
 namespace Jacobi.Vst.Core.Host
 {
@@ -40,7 +39,7 @@ namespace Jacobi.Vst.Core.Host
         /// </summary>
         /// <param name="pluginInfo">Passed with the forwarded call.</param>
         /// <returns>Returns the value returned from the forwarded call.</returns>
-        public bool UpdatePluginInfo(Plugin.VstPluginInfo pluginInfo)
+        public bool UpdatePluginInfo(VstPluginInfo pluginInfo)
         {
             _hostCmdStub.PluginContext.PluginInfo = pluginInfo;
 
@@ -320,9 +319,9 @@ namespace Jacobi.Vst.Core.Host
         /// <returns>Returns an instance of <see cref="Deprecated.VstHostCommandDeprecatedAdapter"/> when the <paramref name="hostCmdStub"/> supports deprecated methods.</returns>
         public static VstHostCommandAdapter Create(IVstHostCommandStub hostCmdStub)
         {
-            if(hostCmdStub is Deprecated.IVstHostCommandsDeprecated20)
+            if(hostCmdStub is IVstHostCommandsDeprecated20)
             {
-                return new Deprecated.VstHostCommandDeprecatedAdapter(hostCmdStub);
+                return new VstHostCommandDeprecatedAdapter(hostCmdStub);
             }
 
             return new VstHostCommandAdapter(hostCmdStub);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-
 using Jacobi.Vst.Core.Plugin;
 
 namespace Jacobi.Vst.Core.Host

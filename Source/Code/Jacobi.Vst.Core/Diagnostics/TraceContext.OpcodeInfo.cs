@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core.Diagnostics
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core.Diagnostics
+{
 	partial class TraceContext
 	{
         /// <summary>

@@ -1,7 +1,8 @@
-﻿namespace Jacobi.Vst.Core.Deprecated
-{
-    using System;
+﻿using System;
+using Jacobi.Vst.Core.Properties;
 
+namespace Jacobi.Vst.Core.Deprecated
+{
     /// <summary>
     /// The VstGenericEvent represents an event of one of the deprecated event types.
     /// </summary>
@@ -19,7 +20,7 @@
             if (eventType == VstEventTypes.MidiEvent || 
                 eventType == VstEventTypes.MidiSysExEvent)
             {
-                throw new ArgumentException(Properties.Resources.VstGenericEvent_InvalidEventType, "eventType");
+                throw new ArgumentException(Resources.VstGenericEvent_InvalidEventType, "eventType");
             }
         }
     }

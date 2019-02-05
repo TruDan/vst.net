@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Used to communicate properties of a plugin parameter to the host.
     /// </summary>

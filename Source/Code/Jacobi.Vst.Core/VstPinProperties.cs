@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// Communicates connection pin properties of the plugin to host.
     /// </summary>

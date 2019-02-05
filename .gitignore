@@ -1,2 +1,14 @@
 .vs/
 *.cache
+Source/BuildResults/
+Source/Code/Jacobi.Vst.Core/Jacobi.Vst.Core.Clr4.csproj.user
+Source/Code/Jacobi.Vst.Core/bin/
+Source/Code/Jacobi.Vst.Core/obj/
+Source/Code/Jacobi.Vst.Interop/Jacobi.Vst.Interop.Clr4.log
+Source/Code/Jacobi.Vst.Interop/Jacobi.Vst.Interop.Clr4.vcxproj.user
+Source/Code/Jacobi.Vst.Interop/bin/
+Source/Code/Jacobi.Vst.Interop/obj/
+Source/Samples/Jacobi.Vst.Samples.Delay.VB/obj/
+Source/Samples/Jacobi.Vst.Samples.Host/bin/
+Source/Samples/Jacobi.Vst.Samples.Host/obj/
+Source/_SharedAssemblies/

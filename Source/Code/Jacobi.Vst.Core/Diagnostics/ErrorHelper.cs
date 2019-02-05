@@ -1,11 +1,11 @@
-﻿namespace Jacobi.Vst.Core.Diagnostics
-{
-    using System;
-    using System.Text;
-    using System.Collections.Generic;
-    using System.Reflection;
-    using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Text;
 
+namespace Jacobi.Vst.Core.Diagnostics
+{
     /// <summary>
     /// Helper class for formatting errors.
     /// </summary>

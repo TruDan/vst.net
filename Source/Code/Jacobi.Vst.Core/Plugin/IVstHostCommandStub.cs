@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core.Plugin
-{
-    using System;
+﻿using System;
 
+namespace Jacobi.Vst.Core.Plugin
+{
     /// <summary>
     /// The Vst Host Stub called by the Plugin (Framework).
     /// </summary>

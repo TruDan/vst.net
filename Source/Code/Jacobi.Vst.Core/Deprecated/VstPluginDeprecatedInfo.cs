@@ -1,9 +1,8 @@
-﻿namespace Jacobi.Vst.Core.Deprecated
+﻿using System;
+using Jacobi.Vst.Core.Plugin;
+
+namespace Jacobi.Vst.Core.Deprecated
 {
-    using System;
-
-    using Jacobi.Vst.Core.Plugin;
-
     /// <summary>
     /// Plugin deprecated information passed to the Host.
     /// </summary>

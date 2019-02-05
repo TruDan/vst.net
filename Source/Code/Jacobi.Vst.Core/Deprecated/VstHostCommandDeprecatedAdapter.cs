@@ -1,18 +1,16 @@
-﻿namespace Jacobi.Vst.Core.Deprecated
+﻿using System;
+using System.Drawing;
+using Jacobi.Vst.Core.Host;
+
+namespace Jacobi.Vst.Core.Deprecated
 {
-    using System;
-    using System.Drawing;
-
-    using Jacobi.Vst.Core;
-    using Jacobi.Vst.Core.Host;
-
     /// <summary>
     /// This class implements an extension to the <see cref="VstHostCommandAdapter"/> to include all depricated Host members.
     /// </summary>
     /// <remarks>
     /// Only instantiate this class when you have a reference to an implementation of the <see cref="IVstHostCommandsDeprecated20"/> interface.
     /// </remarks>
-    public class VstHostCommandDeprecatedAdapter : VstHostCommandAdapter, Deprecated.IVstHostCommandsDeprecated20
+    public class VstHostCommandDeprecatedAdapter : VstHostCommandAdapter, IVstHostCommandsDeprecated20
     {
         private IVstHostCommandsDeprecated20 _deprecatedStub;
         /// <summary>

@@ -1,8 +1,8 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
-    using System.Drawing;
+﻿using System;
+using System.Drawing;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// The Vst Plugin callback functions
     /// </summary>

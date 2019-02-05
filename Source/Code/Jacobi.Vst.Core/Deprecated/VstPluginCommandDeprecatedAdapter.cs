@@ -1,10 +1,9 @@
-﻿namespace Jacobi.Vst.Core.Deprecated
+﻿using System.Drawing;
+using Jacobi.Vst.Core.Host;
+using IVstPluginCommandStub = Jacobi.Vst.Core.Plugin.IVstPluginCommandStub;
+
+namespace Jacobi.Vst.Core.Deprecated
 {
-    using System;
-    using System.Drawing;
-
-    using Jacobi.Vst.Core.Host;
-
     /// <summary>
     /// This class implements an extension to the <see cref="VstPluginCommandAdapter"/> to include all depricated Host members.
     /// </summary>
@@ -19,7 +18,7 @@
         /// Constructs a new instance on the passed <paramref name="pluginCmdStub"/>.
         /// </summary>
         /// <param name="pluginCmdStub">An implementation of the <see cref="IVstPluginCommandsDeprecated20"/> interface. Must not be null.</param>
-        public VstPluginCommandDeprecatedAdapter(Plugin.IVstPluginCommandStub pluginCmdStub)
+        public VstPluginCommandDeprecatedAdapter(IVstPluginCommandStub pluginCmdStub)
             : base(pluginCmdStub)
         {
             _deprecatedStub = (IVstPluginCommandsDeprecated20)pluginCmdStub;

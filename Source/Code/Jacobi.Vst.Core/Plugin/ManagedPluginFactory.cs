@@ -1,9 +1,10 @@
-﻿namespace Jacobi.Vst.Core.Plugin
-{
-    using System;
-    using System.IO;
-    using System.Reflection;
+﻿using System;
+using System.IO;
+using System.Reflection;
+using Jacobi.Vst.Core.Properties;
 
+namespace Jacobi.Vst.Core.Plugin
+{
     /// <summary>
     /// Loads and creates a managed Vst plugin from an assembly
     /// </summary>
@@ -60,7 +61,7 @@
 
             if (_assembly == null)
             {
-                throw new FileNotFoundException(Properties.Resources.ManagedPluginFactory_FileNotFound, assemblyName);
+                throw new FileNotFoundException(Resources.ManagedPluginFactory_FileNotFound, assemblyName);
             }
         }
 
@@ -77,7 +78,7 @@
             if (pluginType == null)
             {
                 throw new InvalidOperationException(
-                    String.Format(Properties.Resources.ManagedPluginFactory_NoPublicStub, _assembly.FullName));
+                    String.Format(Resources.ManagedPluginFactory_NoPublicStub, _assembly.FullName));
             }
 
             return (IVstPluginCommandStub)Activator.CreateInstance(pluginType);

@@ -1,8 +1,9 @@
-﻿namespace Jacobi.Vst.Core
-{
-    using System;
-    using System.Text;
+﻿using System;
+using System.Text;
+using Jacobi.Vst.Core.Properties;
 
+namespace Jacobi.Vst.Core
+{
     /// <summary>
     /// This structure encapsulates a Four Character Code as a string.
     /// </summary>
@@ -75,7 +76,7 @@
         {
             if (value == null || value.Length != 4)
             {
-                throw new ArgumentException(Properties.Resources.FourCharacterCode_InvalidValue, parameterName);
+                throw new ArgumentException(Resources.FourCharacterCode_InvalidValue, parameterName);
             }
         }
     }

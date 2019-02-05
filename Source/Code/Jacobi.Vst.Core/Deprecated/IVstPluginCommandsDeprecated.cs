@@ -1,7 +1,7 @@
-﻿namespace Jacobi.Vst.Core.Deprecated
-{
-    using System.Drawing;
+﻿using System.Drawing;
 
+namespace Jacobi.Vst.Core.Deprecated
+{
     /// <summary>
     /// Contains all the operations from VST 1.0 that were deprecated in VST 2.4.
     /// </summary>
