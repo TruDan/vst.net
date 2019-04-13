@@ -172,7 +172,7 @@ System::Boolean VstPluginCommandStub::EditorGetRect([System::Runtime::InteropSer
 	// some plugins return zero even when succesful.
 	CallDispatch(effEditGetRect, 0, 0, &unmanagedRect, 0);
 
-	if(unmanagedRect->bottom != 0 || unmanagedRect->right != 0)
+	if(unmanagedRect != NULL && (unmanagedRect->bottom != 0 || unmanagedRect->right != 0))
 	{
 		rect = TypeConverter::ToManagedRectangle(unmanagedRect);
 		return true;

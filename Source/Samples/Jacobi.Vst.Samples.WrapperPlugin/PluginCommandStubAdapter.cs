@@ -353,7 +353,7 @@ namespace Jacobi.Vst.Samples.WrapperPlugin
         public void ProcessReplacing(VstAudioBuffer[] inputs, VstAudioBuffer[] outputs)
         {
             _pluginCtx.PluginCommandStub.ProcessReplacing(inputs, outputs);
-        }
+        }    
 
         public void SetParameter(int index, float value)
         {
