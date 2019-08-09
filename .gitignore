@@ -12,3 +12,5 @@ Source/Samples/Jacobi.Vst.Samples.Delay.VB/obj/
 Source/Samples/Jacobi.Vst.Samples.Host/bin/
 Source/Samples/Jacobi.Vst.Samples.Host/obj/
 Source/_SharedAssemblies/
+/Source/Code/Jacobi.Vst.Framework/bin
+/Source/Code/Jacobi.Vst.Framework/obj

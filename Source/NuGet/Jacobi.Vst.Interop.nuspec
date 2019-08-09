@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>VST.NET</id>
+    <version>1.1.2</version>
+    <authors>Marc Jacobi</authors>
+    <owners>Jacobi Software</owners>
+    <title>VST.NET</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://vstnet.codeplex.com/license</licenseUrl>
+    <projectUrl>https://vstnet.codeplex.com/</projectUrl>
+    <description>VST.NET 1.1 primary assemblies 64-bits</description>
+    <releaseNotes>The major change that has been done is that all project files are now VS2012. Because VS2012 does not support targeting a C++ (Jacobi.Vst.Interop) on CLR2 that has been dropped from the release.
+      This also means that the Jacobi.Vst.Interop assembly now requires the VS2012 version of the VC CRT dependency (redistributable package). All VST.NET client machines must have this installed: http://www.microsoft.com/en-us/download/details.aspx?id=30679
+
+      Refer to VST.NET 1.0 release for other non-binary packages.
+
+      Other additions:
+      *Read-only Programs
+      *Change in IVstPluginEditor interface
+      *Host can load (unmanaged) shell-plugins, managed not supported.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>VST CLR4 x64</tags>
+	
+  </metadata>
+  <files>
+    <file src="Jacobi.Vst.Core\bin\x64\Release\net472\Jacobi.Vst.Core.*"
+      target="build\x64" />
+    <file src="Jacobi.Vst.Core\bin\x86\Release\net472\Jacobi.Vst.Core.*"
+      target="build\x86" />
+    <file src="Jacobi.Vst.Framework\bin\x64\Release\net472\Jacobi.Vst.Framework.*"
+      target="build\x64" />
+    <file src="Jacobi.Vst.Framework\bin\x86\Release\net472\Jacobi.Vst.Framework.*"
+      target="build\x86" />
+    <file src="Jacobi.Vst.Interop\bin\x64\Release\Jacobi.Vst.Interop.*"
+      target="build\x64" />
+    <file src="Jacobi.Vst.Interop\bin\Win32\Release\Jacobi.Vst.Interop.*"
+      target="build\x86" />
+    
+    <file src="VST.NET.props" target="build\net472" />
+  </files>
+</package>

@@ -1,45 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.182
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8750DF37-C0F1-4957-A891-38CD9043D2BF}"
 	ProjectSection(SolutionItems) = preProject
 		AssemblyInfo.Version.cpp = AssemblyInfo.Version.cpp
 		AssemblyInfo.Version.cs = AssemblyInfo.Version.cs
-		CreateBuildResults.cmd = CreateBuildResults.cmd
+		Directory.build.props = Directory.build.props
+		Directory.build.targets = Directory.build.targets
 		Jacobi.Vst.Clr4.vsmdi = Jacobi.Vst.Clr4.vsmdi
 		LocalTestRun.Clr4.testrunconfig = LocalTestRun.Clr4.testrunconfig
+		VST.NET.nuspec = VST.NET.nuspec
+		VST.NET.props = VST.NET.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacobi.Vst.Core.Clr4", "Jacobi.Vst.Core\Jacobi.Vst.Core.Clr4.csproj", "{5950F8A9-F413-4ACE-B6E0-6F458B4C26F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jacobi.Vst.Core.Clr4", "Jacobi.Vst.Core\Jacobi.Vst.Core.Clr4.csproj", "{5950F8A9-F413-4ACE-B6E0-6F458B4C26F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacobi.Vst.Framework.Clr4", "Jacobi.Vst.Framework\Jacobi.Vst.Framework.Clr4.csproj", "{F9F64E8A-8739-4DA0-B0E0-8E3CA106CD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jacobi.Vst.Framework.Clr4", "Jacobi.Vst.Framework\Jacobi.Vst.Framework.Clr4.csproj", "{F9F64E8A-8739-4DA0-B0E0-8E3CA106CD6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jacobi.Vst.UnitTest.Clr4", "Jacobi.Vst.UnitTest\Jacobi.Vst.UnitTest.Clr4.csproj", "{2500BA53-FD00-4B76-AFE3-AC68C055BA86}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Jacobi.Vst.Interop.Clr4", "Jacobi.Vst.Interop\Jacobi.Vst.Interop.Clr4.vcxproj", "{E0CC0CCF-A40D-4A53-8FAC-B6AF7E76EB08}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs06
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Jacobi.Vst.Core\\Jacobi.Vst.Core.Clr4.csproj
-		SccProjectName1 = Jacobi.Vst.Core
-		SccLocalPath1 = Jacobi.Vst.Core
-		SccProjectUniqueName2 = Jacobi.Vst.Framework\\Jacobi.Vst.Framework.Clr4.csproj
-		SccProjectName2 = Jacobi.Vst.Framework
-		SccLocalPath2 = Jacobi.Vst.Framework
-		SccProjectUniqueName3 = Jacobi.Vst.UnitTest\\Jacobi.Vst.UnitTest.Clr4.csproj
-		SccProjectName3 = Jacobi.Vst.UnitTest
-		SccLocalPath3 = Jacobi.Vst.UnitTest
-		SccProjectUniqueName4 = Jacobi.Vst.Interop\\Jacobi.Vst.Interop.Clr4.vcxproj
-		SccProjectName4 = Jacobi.Vst.Interop
-		SccLocalPath4 = Jacobi.Vst.Interop
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = Jacobi.Vst.Clr4.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -96,5 +80,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {710DD80D-F32D-493F-9994-D5B54185CEDC}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Jacobi.Vst.Clr4.vsmdi
 	EndGlobalSection
 EndGlobal

@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Jacobi.Vst.Core")]
+//[assembly: AssemblyTitle("Jacobi.Vst.Core")]
 [assembly: AssemblyDescription("Core managed types.")]
-[assembly: AssemblyProduct("VST.NET")]
+//[assembly: AssemblyProduct("VST.NET")]
 [assembly: AssemblyCulture("")]
 
 // The core assembly is not CLS compliant.

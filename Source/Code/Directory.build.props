@@ -1,0 +1,29 @@
+<Project>
+
+	<PropertyGroup>
+		<Version>1.1.4</Version>
+	</PropertyGroup>
+
+    <!--<PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        --><!--<RuntimeIdentifier>win</RuntimeIdentifier>--><!--
+    </PropertyGroup>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    </PropertyGroup>
+
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+        <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.0.0-preview5.19224.8" />
+    </ItemGroup>-->
+
+
+    <ItemGroup>
+        <Compile Include="..\*.cs" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <ProduceReferenceAssemblies>true</ProduceReferenceAssemblies>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>VST.NET</id>
+    <version>1.1.3</version>
+    <authors>Marc Jacobi</authors>
+    <owners>Jacobi Software</owners>
+    <title>VST.NET</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://vstnet.codeplex.com/license</licenseUrl>
+    <projectUrl>https://vstnet.codeplex.com/</projectUrl>
+    <description>VST.NET 1.1 primary assemblies 64-bits</description>
+    <releaseNotes>The major change that has been done is that all project files are now VS2012. Because VS2012 does not support targeting a C++ (Jacobi.Vst.Interop) on CLR2 that has been dropped from the release.
+      This also means that the Jacobi.Vst.Interop assembly now requires the VS2012 version of the VC CRT dependency (redistributable package). All VST.NET client machines must have this installed: http://www.microsoft.com/en-us/download/details.aspx?id=30679
+
+      Refer to VST.NET 1.0 release for other non-binary packages.
+
+      Other additions:
+      *Read-only Programs
+      *Change in IVstPluginEditor interface
+      *Host can load (unmanaged) shell-plugins, managed not supported.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>VST CLR4 x64</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.7.2" />
+	  <frameworkAssembly assemblyName="System.Windows.Forms" targetFramework=".NETFramework4.0, .NETFramework4.5, .NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="..\Code\Jacobi.Vst.Core\bin\x64\Release\net472\Jacobi.Vst.Core.dll" target="VstNet\x64" />
+    <file src="..\Code\Jacobi.Vst.Framework\bin\x64\Release\net472\Jacobi.Vst.Framework.dll" target="VstNet\x64" />
+    <file src="..\Code\Jacobi.Vst.Interop\bin\x64\Release\Jacobi.Vst.Interop.dll" target="VstNet\x64" />
+    <file src="..\Code\Jacobi.Vst.Interop\bin\x64\Release\Jacobi.Vst.Interop.xml" target="VstNet\x64" />
+
+    <file src="..\Code\Jacobi.Vst.Core\bin\x86\Release\net472\Jacobi.Vst.Core.dll" target="VstNet\x86" />
+    <file src="..\Code\Jacobi.Vst.Framework\bin\x86\Release\net472\Jacobi.Vst.Framework.dll" target="VstNet\x86" />
+    <file src="..\Code\Jacobi.Vst.Interop\bin\Win32\Release\Jacobi.Vst.Interop.dll" target="VstNet\x86" />
+    <file src="..\Code\Jacobi.Vst.Interop\bin\Win32\Release\Jacobi.Vst.Interop.xml" target="VstNet\x86" />
+    
+    <file src="VST.NET.props" target="build" />
+    <file src="VST.NET.targets" target="build" />
+  </files>
+</package>

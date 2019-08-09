@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VstNetTargetDir Condition=" '$(VstNetTargetDir)' == '' "></VstNetTargetDir>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <VstNetBinaries32 Include="$(MSBuildThisFileDirectory)..\VstNet\x86\*.*" />
+    <VstNetBinaries64 Include="$(MSBuildThisFileDirectory)..\VstNet\x64\*.*" />
+    <!-- Not currently used, might come in handy for someone though as it contains all x86 and x64 files -->
+    <VstNetBinariesAnyCPU Include="$(MSBuildThisFileDirectory)..\VstNet\**\*.*" />
+  </ItemGroup>
+  
+  <!--
+    These item groups should be in the .props file, unfortunately Nuget 2.8.x doesn't gurantee the
+    correct ordering .props imports, which we require as this depends on the cef.redist packages
+    exporting an ItemGroup
+   -->
+
+  <!-- Copying all files here included those at are added As References so you can specify VstNetTargetDir -->
+  <Choose>
+    <When Condition="'$(Platform)' == 'AnyCPU'">
+      <ItemGroup>
+        <None Include="@(VstNetBinaries32)">
+          <Link>$(VstNetTargetDir)\x86\%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="@(VstNetBinaries64)">
+          <Link>$(VstNetTargetDir)\x64\%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(Platform)' == 'x64'">
+      <ItemGroup>
+        <None Include="@(VstNetBinaries64)">
+          <Link>$(VstNetTargetDir)\%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+      </ItemGroup>
+    </When>    
+    <!-- x86, and Win32 -->
+    <Otherwise>
+      <ItemGroup>
+        <None Include="@(VstNetBinaries32)">
+          <Link>$(VstNetTargetDir)\%(RecursiveDir)%(FileName)%(Extension)</Link>
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
